@@ -1,0 +1,933 @@
+
+body{
+
+	font-family: Open Sans, sans-serif;
+	box-sizing: inherit;
+	width: auto;
+	background-color: #F5F5F5;
+	
+}
+
+
+
+.container{
+	width: 80%;
+}
+
+
+
+.header{
+	
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 500px;
+	font-weight: lighter;
+	font-size: 17px;
+	box-sizing: inherit;
+	position: relative;
+	
+
+
+	a{
+		color: white;
+	}
+
+	
+}
+
+
+.header:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.6);
+  z-index: -1;
+}
+
+.header-nav{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+	margin-top: 20px;
+
+	.header-menu{
+		list-style: none;
+		margin-top: 50px;
+		min-width: 540px;
+		padding-left: 40px;
+		z-index: 15;
+	
+		.header-menu-insurance img{
+			margin-left: 2px;
+		}
+		a{
+			color: white;
+			padding:10px 7px;
+			transition: .5s;
+			&:hover{
+				opacity:.6;
+				text-decoration: none;
+			}
+		}
+	}
+		
+	.header-phones-calc{
+		display: flex;
+	}
+	.header-adaptive-phones-button{
+		display: none;
+		height: 60px;
+		margin-top: 13px;
+
+	}
+	.header-phones-adaptive{
+		display: none;
+		position: absolute;
+
+	}
+
+	.header-dropmenu-button{
+		position: absolute;
+		cursor: pointer;
+		border: 1px solid #DDDDDD;
+		border-radius: 4px;
+		width: 53px;
+		height: 43px;
+		display: block;
+
+		span, span:before, span:after{
+		    width: 25px;
+		    height: 2px;
+		    background-color: grey;
+		    display: block; 
+		    position: absolute;
+		    margin-left:-12px;
+		    margin-top: -1px;
+		    left: 50%;
+		    top: 50%;
+		}
+		span:before{
+		   
+		    margin-top: -9px;
+		   
+		    content:"";
+		}
+		span:after{
+		    
+		   margin-top: 7px;
+		   
+		   content: "";
+		}
+
+		
+	}
+
+	.header-phones{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-self: center;
+		
+		margin:0 4px 0 30px;
+		margin-top: 20px;
+		a{
+			margin:0;
+			padding:0;
+			display: block;
+			text-decoration: none;
+			transition: .5s;
+			width: 146px;
+			&:hover{
+				opacity:.6;
+				text-decoration: none;
+			}
+		}
+	}
+	.header-calc{
+		margin-left: 10px;
+		margin-top: 40px;
+		border:1px solid white;
+		border-radius: 30px;
+		text-decoration: none;
+		padding:6px 17px 10px 17px;
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		height: 40px;
+		transition: .3s;
+		min-width: 194px;
+
+		&:hover{
+				background-color: #fff;
+				color: #363636;
+				text-decoration: none;
+
+			}
+
+	}
+}
+
+.header-menu-active{
+	display: none;
+	margin-top: 30px;
+
+
+	li{
+		padding:5px 0;
+	}
+	a{
+		font-size: 19px;
+		
+	}
+}
+
+
+.header-menu-modal{
+	list-style: none;
+	height: 84px;
+	background-color: white;
+	padding:7px 0 0 0;
+	margin:0;
+	border-radius: 5px;
+	width: 230px;
+	left: 19%;
+	top: 110px;
+	position: absolute;
+	display: none;
+	z-index: 10;
+
+	a{
+		text-decoration: none;
+		display: block;
+		padding:5px 25px;
+		color: black;
+		font-size: 15px;
+		transition: .3s;
+
+		&:hover{
+			background: #EBEBEB;
+		}
+
+	}
+
+}
+/*----------------------------   OSAGO KASKO   ----------*/
+.header-content{
+	color: white;
+	
+	position: absolute;
+	top: 170px;
+	line-height: 1.3;
+	
+	
+	.header-osago{
+		font-size: 35px;
+		font-weight: bold;
+
+	}
+	.header-cheb-nchk, .osago-sale{
+		font-size: 31px;
+		font-weight: 600;
+	}
+	.osago-sale{
+		border:3px solid white;
+		border-radius: 17px;
+		padding:0px 10px 5px 10px;
+	}
+	.header-osago-descr{
+		font-size: 23px;
+		letter-spacing: 1px;
+		line-height: 1;
+	
+		opacity: .90;
+		color: #F4F4F4;
+	}
+}
+
+.header-bottom-content{
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	color: white;
+	
+	
+	font-size: 15px;
+	margin-top: 260px;
+
+
+	.header-bottom-p{
+		margin-right: 10px;
+	}	
+
+	.header-slider{
+		
+		width: 530px;
+			
+		img{
+			width: 120px;
+		}
+		
+		
+	}
+	
+}
+
+
+/*-----------------------------------  HEADER FORMS ------------*/
+
+
+.header-forms-container{
+	background: #2B6BC8;
+	width: 1087px;
+	margin:0 auto;
+	border-radius: 7px;
+	margin-top: -56px;
+	/*position: absolute;*/
+	z-index: 5;
+
+	.header-osago-formmm{
+		display: flex;
+	}
+	.header-osago-form{
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		margin-left: 25px;
+		color: white;
+		font-weight: lighter;
+		margin-top: 30px;
+		padding-bottom: 54px;
+
+		.form-button{
+			text-transform: uppercase;
+			display: block;
+			left: 170px;
+			position: relative;
+			margin:35px 0 0 0;
+			color: white;
+			text-decoration: none;
+			cursor: pointer;
+			font-size: 15px;
+			font-weight: bold;
+			padding: 7px 20px;
+			border-radius: 20px;
+			transition: .3s;
+			background-color: #0846A1;
+			width: 155px;
+			height: 40px;
+
+			&:hover{
+				background-color: white;
+				color: #0846A1;
+			}
+
+		}
+		.form-button-4{
+			left: 80px;
+		}
+
+		.form-label-select-container{
+			width: 230px;
+			font-size: 15px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-content: center;
+			margin:0 5px;
+			
+			input::placeholder{
+				color: #4B96D7;
+			}
+
+			select, input{
+				padding:5px 12px;
+				border:1px solid white;
+				border-radius: 4px;
+			}
+			select, option, input{
+				font-size: 15px;
+				font-weight: lighter;
+				background-color: #1958B4;
+				color: white;
+
+			}
+
+		}	
+
+		
+	}
+
+	.header-form{
+		list-style: none;
+		display: flex;
+		width: 100%;
+		height: 57px;
+		
+		padding:0;
+		margin:0;
+		border-bottom: 1px solid white;
+
+	
+		li{
+			padding:15px 23px;
+
+		}
+		a{
+
+			color: white;
+			cursor: pointer;
+			padding-bottom: 15px;
+			display: inline-block;
+			text-decoration: none;
+			transition: .2s;
+			&:hover{
+				border-bottom: 3px solid white;
+				color: white;
+			}
+	
+		}
+
+	}
+	
+}
+.header-forms-container-adaptive{
+		display: none;
+	}
+
+
+.header-form-labels-selects{
+	display: flex;
+	
+	
+
+	
+	
+
+	width: 100%;
+}
+.header-form-labels-selects-adaptive{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+
+
+	.header-form-l-s-adaptive-1, header-form-l-s-adaptive-2{
+		display: flex;
+	}
+
+}
+
+.active-form{
+	border-bottom: 3px solid white;
+}
+
+.active{
+	display: block;
+}
+.hide{
+	display: none;
+}
+/*.header-form-labels-selects-2{
+	display: none;
+}*/
+
+.header-forms-container .header-osago-form-2,{
+	display: none;
+}
+.header-forms-container .header-osago-form-3,{
+	display: none;
+}
+.header-forms-container .header-osago-form-4,{
+	display: none;
+}
+
+.header-osago-form .header-form-labels-selects .form-radio-buttons{
+	display: inline-block;
+	margin-top: 10px;
+
+	.form-radio-inputs label{
+		margin-left: 5px;
+	}
+	.form-radio-inputs input{
+		margin-left: 10px;
+	}
+	
+}
+.header-bottom-p-adaptive{
+	display: none;
+}
+.header-osago-form .header-form-labels-selects .form-input-age{
+	width: 85px;
+}
+.form-input-age input{
+	width: 85px;
+}
+
+.header-osago-form .header-form-labels-selects .form-label-select-container-4{
+	margin-top: 10px;
+
+	.form-radio-inputs label{
+		margin-left: 5px;
+	}
+	.form-radio-inputs input{
+		margin-left: 10px;
+	}
+}
+
+
+/*-------------------------   INSURANCE   ----------------------------*/
+
+
+.content-insurance-container-adaptive{
+	display: none;
+}
+
+
+.content-insurance-container .container{
+	padding:0 0 0 0;
+
+}
+
+.content-insurance-container .row{
+	display: flex;
+	width: 100%;
+	margin-top: 50px;
+	margin-left: 0px;
+	
+
+
+	.col-md-4, .col-md-8{
+		padding:0;
+		color: #222222;
+
+
+	}
+
+	p{
+		margin-left: 15px;
+	}
+	.car-insurance-p{
+		margin-top: 20px;
+	}
+	.car-insurance-p-descr{
+		font-size: 13px;
+		font-weight: lighter;
+		color: #6D6D6D;
+	}
+
+	.car-insurance-percent{
+		color: #0846A3;
+		font-size: 17px;
+	}
+	/*----------------cont blocks-----------------*/
+	
+
+	.content-car-insurance{
+		width: 95%;
+		height: 100%;
+		
+		box-shadow: 1px 0px 12px #A9A9A9;
+		background-color: white;
+		border-radius: 6px;
+		cursor: pointer;
+		transition: .3s;
+		
+		.button-car-insurance{
+			width: 150px;
+		}
+		&:hover{
+			box-shadow: 1px 0px 18px #A9A9A9;
+			/*border-bottom: 2px solid #0846A3;*/
+		}
+	}
+
+	.content-mortgage-container-desktop{
+		height: 350px;
+	}
+	.content-mortgage-container{
+		
+		box-shadow: 3px 3px 10px #BDBDBD;
+		background-color: white;
+		border-radius: 6px;
+		width: 95%;
+		
+		cursor: pointer;
+		transition: .3s;
+		
+
+		.car-insurance-p{
+			padding: 0 10px;
+
+		}
+		.button-car-insurance{
+			width: 200px;
+		}
+
+		&:hover{
+			box-shadow: 1px 0px 18px #A9A9A9;
+			border-bottom: 2px solid #0846A3;
+		}
+	}
+	.button-car-insurance{
+		top: 20px;
+		left: 25px;
+		font-size: 15px;
+		position: absolute;
+		padding: 1px 13px;
+		border-radius: 20px;
+
+		background-color: #0846A1;
+		color: white;
+		font-weight: lighter;
+	}
+}
+
+
+/*------------------------------   ADVANTAGES   --------------------------------*/
+
+
+.content-advantage-container-adaptive{
+	display: none;
+}
+
+
+.content-advantage-container{
+	width: 100%;
+	text-align: center;
+	margin-top: 105px;
+
+	.container{
+		width: 1080px;
+	}
+	.content-advantage-header{
+		font-size: 35px;
+		font-family: Open Sans, sans-serif;
+		font-weight: 800;
+		margin-bottom: 50px;
+	}
+}
+
+.content-advantage-container-row-1, .content-advantage-container-row-2{
+	display: flex;
+	
+
+	.content-advantage-item{
+		box-shadow: 0px 0px 13px #BDBDBD;
+		display: flex;
+		background-color: white;
+		width: 333px;
+		font-size: 15px;
+		line-height: 1.2;
+		padding:15px 20px 5px 15px;
+		border-radius: 8px;
+		margin:0 15px;
+		text-align: left;
+
+		img{
+			width: 60px;
+			height: 50px;
+			margin-right: 15px;
+
+
+		}
+	}
+}
+.content-advantage-container-row-1{
+	
+	justify-content: space-between;
+}
+.content-advantage-container-row-2{
+	justify-content: center;
+	margin-top: 25px;
+	.content-advantage-item{
+		margin:0 15px;
+	}
+
+}
+
+/*-------------------------   HOW WE WORKING   -----------------------------*/
+
+
+.content-howweworking-container{
+	width: 100%;
+	
+	margin-top: 100px;
+
+	.header-howweworking{
+		font-size: 35px;
+		font-family: Open Sans, sans-serif;
+		font-weight: 800;
+		margin-bottom: 40px;
+		text-align: center;
+		font-weight: bold;
+	}
+}
+
+.content-howweworking-items{
+	display: flex;
+	justify-content: space-between;
+
+	.content-howweworking-item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+		text-align: center;
+		font-weight: lighter;
+		font-size: 15px;
+		line-height: 1.3;
+		color: #4A4A4A;
+		img{
+			box-shadow: 0 0 6px #BDBDBD;
+			border-radius: 50%;
+			margin-bottom: 13px;
+		}
+	}
+
+	/*.content-howweworking-item-2{
+		margin-top: 30px;
+	}*/
+}
+
+
+/*----------------------------   DESCRIPTION   ----------------------------------*/
+
+
+.content-description-container{
+	margin-top: 100px;
+	width: 100%;
+	font-weight: lighter;
+	font-size: 15px;
+	a{
+		font-size: 26px;
+		font-weight: 600;
+		color: #0846A1;
+		text-decoration: underline;
+	}
+	.button-cont-descr-osmotr{
+		background-color: #0846A1;
+		padding:5px 15px;
+		color: white;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-radius: 20px;
+		transition: .2s;
+		border:1px solid #0846A1;
+		cursor: pointer;
+
+		&:hover{
+			background-color: white;
+			border:1px solid #0846A1;
+			color: #0846A1;
+		}
+
+	}
+	.button-cont-descr-osmotr-1{
+		width: 100%	;
+	}
+	.button-cont-descr-osmotr-2{
+		width: 100%	;
+	}
+	.button-cont-descr-osmotr-3{
+		width: 100%	;
+	}
+}
+
+
+/*---------------------------   FEEDBACK   ----------------------------------*/
+
+
+
+.feedback-main-container{
+	width: 100%;
+}
+
+.feedback-header{
+	font-weight: bold;
+	text-align: center;
+	margin:80px auto 0 auto;
+}
+
+.feedback-container{
+	width: 100%;
+	margin-top: 50px;
+	
+
+	
+	.slick-next, .slick-prev{
+		display: none;
+	}
+
+	.feedback-item{
+		display: flex;
+		outline: none;
+		/*background-color: green;*/
+		height: 150px;
+		line-height: 1.4;
+		
+		p{
+			margin:0;
+
+		}
+		img{
+			border-radius: 50%;
+			margin-right: 25px;
+		}
+		.feedback-item-text{
+			
+			margin-top: 15px;
+
+
+			.feedback-item-p, .feedback-service{
+				color: #313131;
+				font-weight: bold;
+				font-size: 19px;
+				line-height: 1.3;
+			}
+			.feedback-service{
+				margin-bottom: 7px;
+			}
+			.feedback-item-description{
+				font-weight: lighter;
+				font-size: 15px;
+				color: #3F3F3F;
+			}
+		}
+		
+	}
+}
+.feedback-footer{
+	margin:10px auto 0 auto;
+	text-align: center;
+	a{
+		font-weight: lighter;
+		color: #486B9E;
+		font-size: 15px;
+	}
+}
+
+/*----------------------------   FOOTER   ------------------------------*/
+
+
+.footer .col-12{
+	display: flex;
+}
+
+.footer-adaptive{
+	display: none;
+	width: 100%;
+	
+	color: #5F5F5F;
+	font-size: 14px;
+	font-weight: lighter;
+	position: absolute;
+	border-top:2px solid #C0C0C0;
+	margin-top: 60px;
+	padding: 30px 0;
+
+	.footer-item{
+		margin:0 45px;
+		line-height: 1.7;
+		
+		p{
+			margin:0;
+		}
+	}
+	.footer-item-1, .footer-item-5{
+		text-align: center;
+	}
+	.footer-item-5{
+		a{
+			padding:7px 20px;
+			color: #646464;
+			font-weight: lighter;
+			font-size: 15px;
+			border:1px solid #3F3F3F;
+			border-radius: 20px;
+			transition: .2s;
+			&:hover{
+				background-color: #363636;
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+	.footer-item-5 .footer-media{
+		margin:15px 0;
+	}
+	.footer-item-4-5{
+		margin-top: 30px;
+	}
+}
+
+.slick-slider .slick-next{
+	display: none;
+}
+.footer{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-self: center;
+	color: #5F5F5F;
+	font-size: 13px;
+	font-weight: lighter;
+	position: absolute;
+	border-top:2px solid #C0C0C0;
+	margin-top: 60px;
+	padding: 30px 0;
+
+
+	.footer-item{
+		padding:0 23px;
+		.footer-offices{
+			width: 133px;
+			height: 41px;
+		}
+	}
+
+	.footer-item-1{
+		text-align: center;
+		img{
+			margin-bottom: 20px;
+		}
+	}
+	.footer-item-2 p, .footer-item-3 p{
+		margin:0;
+	}
+	.footer-item-2, .footer-item-3, .footer-item-4{
+		margin-top: 50px;
+	}
+	.footer-item-5{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		.footer-media{
+			margin:25px 0;
+			transition: .2s;
+
+		}
+		a{
+			padding:7px 20px;
+			color: #646464;
+			font-weight: lighter;
+			font-size: 15px;
+			border:1px solid #3F3F3F;
+			border-radius: 20px;
+			transition: .2s;
+			&:hover{
+				background-color: #363636;
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+

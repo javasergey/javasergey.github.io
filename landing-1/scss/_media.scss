@@ -1,0 +1,619 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+
+	.header-nav .header-phones-calc{
+		display: block;
+	}
+	.header-nav .header-phones-calc .header-calc{
+		margin-top:2px;
+	}
+	.header .header-bottom-content{
+		margin-top: 220px;
+	}
+	.header .header-slider{
+		
+		width: 430px;
+			
+		img{
+			width: 100px;
+		}
+		
+		
+	}
+	.header-forms-container{
+		width: 950px;
+
+
+	}
+	.header-forms-container .header-osago-form .form-button{
+		left:30px;
+		top: 0px;
+
+
+
+	}
+	.header-forms-container .header-osago-form .form-button-adaptive{
+		left: 480px;
+		top: -70px;
+
+
+
+	}
+
+	.header-forms-container .header-osago-form .form-button-4{
+		left: -10px;
+	}
+
+
+	.header-forms-container .header-form-l-s-adaptive-2{
+		margin-top: 20px;
+
+	}
+	.header-forms-container .header-osago-form .header-osago-form-1{
+		padding-bottom: 0;
+	}
+
+	.header-form-l-s-adaptive{
+		display: none;
+	}
+	.header-bottom-p-adaptive{
+		display: none;
+	}
+	.header-forms-container-adaptive{
+		display: none
+	}
+	.footer-adaptive{
+		display: none;
+	}
+	.content-advantage-container-adaptive{
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width: 1000px){
+	/*.header-forms-container .header-osago-form .form-label-select-container-3, .header-forms-container .header-osago-form .form-button{
+		display: none;
+	}*/
+}
+
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	body{
+		min-width: 100vw;
+		
+		
+	}
+	.container{
+		width: 100%;
+	}
+
+	
+	.header{
+		width: 100vw;
+		height: 266px;
+
+	}
+
+	.header-active{
+		height: 500px;
+		transition: .4s;
+	}
+	.header-content-active{
+		margin-top: 230px;
+		transition: .4s;
+	}
+
+	.header-menu{
+		display: none;
+	}
+	.header-nav .header-logo{
+		margin-right: 30px;
+
+	}
+	.header-nav .header-logo img{
+		
+		width: 140px;
+	}
+	.header-nav .header-dropmenu-button{
+		display: block;
+		margin-left: 160px;
+
+	}
+	.header-nav .header-phones-calc{
+		margin-top: 20px;
+	}
+	.header-nav .header-phones{
+		display: none;
+	}
+	.header-nav .header-phones-adaptive{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: left;
+	}
+	.header-nav .header-adaptive-phones-button{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 250px;
+	}
+	.header .header-bottom-content{
+		display: none;
+	}
+	.header .header-content{
+		text-align: center;
+		/*margin-left: 40px;*/
+		top: 140px;
+	}
+	.header .header-content .header-osago{
+		font-size: 29px;
+	}
+	.header .header-content .header-cheb-nchk, .header .header-content .osago-sale{
+		font-size: 24px;
+		font-weight: 600;
+	}
+	.header .header-content .header-osago-descr{
+		font-size: 21px;
+		
+	}
+	.header-forms-container{
+		display: none;
+		height: 290px;
+	}
+	.header-forms-container-adaptive{
+		width: 690px;
+		margin-top: 15px;
+		display: block;
+	}
+
+	.header-bottom-p-adaptive{
+		text-align: center;
+		display: block;
+		font-size: 15px;
+		margin-top: 25px;
+		font-weight: lighter;
+		color: #565656;
+	}
+	.header-forms-container .header-osago-form .form-label-select-container{
+		width: 310px;
+	}
+
+	.header-forms-container .header-form-l-s-adaptive{
+		display: none;
+	}
+	
+	.footer{
+		display: none;
+
+	}
+	.footer-adaptive{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		
+	}
+	.footer-adaptive .footer-item-1-2-3, .footer-adaptive .footer-item-4-5{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+	/*-----------------------------------------advantage*/
+
+
+	/*.content-advantage-container-adaptive{
+		display: none;
+	}*/
+	.content-advantage-container{
+		display: none;
+	}
+	.content-advantage-container-adaptive{
+		display: block;
+	}
+	.content-advantage-container-adaptive .col-12{
+		display: block;
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item{
+		
+		box-shadow: 0px 0px 13px #BDBDBD;
+		display: flex;
+		background-color: white;
+		width: 100%;
+		font-size: 15px;
+		line-height: 1.2;
+		padding:23px 20px;
+		border-radius: 8px;
+		margin-top: 25px;
+		text-align: left;
+
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item img{
+		padding-right: 20px;
+
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item p{
+		font-size: 16px;
+		color: #202020;
+		margin:0;
+		margin-top: 12px;
+		
+	}
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	.content-advantage-container{
+		display: none;
+	}
+	.content-advantage-container-adaptive{
+		display: block;
+	}
+	.content-advantage-container-adaptive .col-12{
+		display: block;
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item{
+		
+		box-shadow: 0px 0px 13px #BDBDBD;
+		display: flex;
+		background-color: white;
+		width: 100%;
+		font-size: 15px;
+		line-height: 1.2;
+		padding:23px 20px;
+		border-radius: 8px;
+		margin-top: 25px;
+		text-align: left;
+
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item img{
+		padding-right: 20px;
+
+	}
+	.content-advantage-container-adaptive .col-12 .content-advantage-item p{
+		font-size: 14px;
+		color: #202020;
+		margin:0;
+		margin-top: 12px;
+		
+	}
+
+	
+
+	.content-insurance-container{
+		display: none;
+	}
+	.content-insurance-container-adaptive{
+		display: block;
+	}
+	.content-insurance-container-adaptive .col-md-8{
+		padding-bottom: 100px;
+		display: flex;
+		justify-content: center;
+		
+
+	}
+	.content-insurance-container-adaptive .col-md-4{
+		display: flex;
+		justify-content: center;
+		
+	}
+	.content-howweworking-container .content-howweworking-items{
+		display: block;
+		justify-content: center;
+		align-items: center;
+	}
+	.content-howweworking-container .content-howweworking-item{
+		margin:0 auto;
+	}
+
+	.header .header-phones-calc{
+		margin:90px 190px 0 auto;
+
+	}
+	.header .header-phones-adaptive{
+		margin-left: 70px;
+	}
+	.header .header-dropmenu-button{
+		margin-left: 300px;
+	}
+	.header .header-osago .osago-sale{
+		font-size: 20px;
+
+		font-weight: lighter;
+	}
+	.header .header-content .header-osago-descr{
+		font-size: 17px;
+	}
+	.header .header-content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		line-height: 1.1;
+		margin-left: 50px;
+		margin-top: 20px;
+
+	}
+	.header .header-content .header-osago{
+		width: 350px;
+		font-size: 27px;
+	}
+	.header .header-content .header-osago .header-cheb-nchk{
+		
+		font-size: 19px;
+	}
+	.header{
+		height: 320px;
+	}
+	.header .header-menu-active{
+		padding:0;
+		top: 110px;
+		position: absolute;
+		left: -10px;
+		margin:0;
+		list-style: none;
+	}
+	.header .header-menu-active li{
+		padding:3px 10px;
+		
+	}
+	.header-forms-container-adaptive{
+		width: 510px;
+	}
+	.header-forms-container-adaptive .form-label-select-container select{
+		width: 220px;
+	}
+	.header-forms-container .header-form-l-s-adaptive-2 .form-button-adaptive{
+		left: 300px;
+	}
+	.header-forms-container .header-form .active-insurance{
+		
+		line-height: 1.1;
+	}
+	.header .header-logo img{
+		width: 120px;
+		left: 50px;
+		position: relative;
+	}
+	.footer-adaptive .footer-item-1-2-3, .footer-adaptive .footer-item-4-5{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer-adaptive .footer-item{
+		margin-top: 20px;
+		text-align: center;
+	}
+	.footer-adaptive .footer-item-4-5{
+		margin-top: 0;
+	}
+	.content-description-container .button-cont-descr-osmotr{
+		font-size: 13px;
+	}
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	.content-advantage-container-adaptive .container{
+		width: 100%;
+	}
+	.header-forms-container-adaptive{
+		width: 95%;
+		height: 400px;
+	}
+	.header-forms-container-adaptive .header-form-l-s-adaptive-1, .header-forms-container-adaptive .header-form-l-s-adaptive-2{
+		display: flex;
+		flex-direction: column;
+	}
+	.header-forms-container-adaptive .header-form-l-s-adaptive-1 .form-label-select-container-1, .header-forms-container-adaptive .header-form-l-s-adaptive-1 .form-label-select-container-2{
+		width: 95%;
+	}
+	.header-forms-container-adaptive .header-form-l-s-adaptive-2 .form-label-select-container-3{
+		width: 95%;
+	}
+	.header-forms-container-adaptive .header-form-l-s-adaptive-2 .form-button{
+		margin-right: 50px;
+		left:55%;
+
+		
+		
+		margin-top: 90px;
+
+	}
+	.header-forms-container-adaptive .form-label-select-container select{
+		width: 100%;
+	}
+	.header-forms-container-adaptive .header-form li{
+		padding:10px 15px 15px 15px;
+	}
+	.header-forms-container-adaptive .header-form li a{
+		font-size: 13px;
+		padding-bottom: 20px;
+	}
+	.header-osago-form .header-form-labels-selects{
+		font-size: 14px;
+	}
+	.header-forms-container-adaptive .header-form-l-s-adaptive-2{
+		margin-top: 0;
+	}
+	.header-form-labels-selects label{
+		margin:10px 0 0 0;
+		
+		font-size: 14px;
+	}
+	.header-form-labels-selects select{
+		
+	}
+	.header-osago-form .header-form-labels-selects .form-label-select-container{
+		margin-top: 10px;
+	}
+	.header-forms-container .header-osago-form{
+		margin:0 0 0 15px;
+	}
+	.header-nav .header-dropmenu-button{
+		margin-left: 230px;
+	}
+	.header .header-content{
+		position: relative;
+		margin:-130px auto 0 auto;
+	}
+	.header .header-content .header-osago{
+		width: 300px;
+		font-size: 23px;
+	}
+	.header .header-menu-active{
+		left: 5px;
+
+	}
+	.header .header-menu-active li{
+		padding:0 10px;
+		line-height: 1.4;
+	}
+	.header .header-menu-active a{
+		font-size: 17px;
+	}
+	.header .header-logo img{
+		left: 80%;
+	}
+	.feedback-main-container .feedback-header{
+		font-size: 30px;
+	}
+	.feedback-main-container .feedback-item-p, .feedback-main-container .feedback-service{
+		font-weight: lighter;
+	}
+	.feedback-main-container .feedback-item-description{
+		 
+	}
+	.header .header-content .header-osago-descr{
+		font-size: 14px;
+		
+	}
+	.header-bottom-p-adaptive{
+		font-size: 13px;
+		margin:20px;
+	}
+
+	.content-advantage-item img{
+		
+		height: 52px;
+	}
+	.content-advantage-container-adaptive .content-advantage-header{
+		font-size: 29px;
+	}
+	.content-howweworking-container .header-howweworking{
+		font-size: 28px;
+	}
+
+
+
+}
+
+
+
+
+
+
+@media screen and (max-width: 400px){
+	.header-forms-container-adaptive .header-form-l-s-adaptive-2 .form-button{		
+		left:45%;				
+		margin-top: 90px;
+	}
+	.header-forms-container-adaptive .header-form li{
+		padding:10px 8px 15px 8px;
+	}
+	.header .header-phones-adaptive a{
+		font-size: 13px;
+		margin-left: 30px;
+	}
+	.header .header-logo img{
+		left: 100%;
+	}
+	.header .header-dropmenu-button{
+		right: 5px;
+	}
+	.header-content .osago-sale{
+		padding:0 6px 5px 6px;
+	}
+	.feedback-main-container{
+		height: 400px;	 	
+	}
+
+	
+}
+
+@media screen and (max-width: 550px){
+	
+}
+@media screen and (max-width: 530px){
+	
+}
+@media screen and (max-width: 510px){
+	
+}
+@media screen and (max-width: 490px){
+	
+}
+@media screen and (max-width: 470px){
+	
+}
+@media screen and (max-width: 450px){
+	
+}
+@media screen and (max-width: 430px){
+	
+}
+@media screen and (max-width: 410px){
+	
+}
+@media screen and (max-width: 380px){
+	
+	
+}
+@media screen and (max-width: 350px){
+	
+}
+@media screen and (max-width: 320px){
+	
+}
+@media screen and (max-width: 290px){
+	
+}
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+	
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
