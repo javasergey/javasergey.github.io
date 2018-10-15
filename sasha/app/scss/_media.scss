@@ -1,0 +1,78 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.top-gallery{
+		margin-top: 60px;
+	}
+	
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	.top-gallery{
+		margin-top: 60px;
+	}
+	
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	.top-gallery{
+		margin-top: 60px;
+	}
+	
+	.footer-h1{
+		top: 50px;
+		left: 50px;
+	}
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	
+	.top-gallery{
+		margin-top:3px;
+	}
+	.copyright{
+		
+		color: black;
+		transition: .3s;	
+	}
+	.headers{
+		margin-top: 50px;
+	}
+}
+
+
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+	
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
