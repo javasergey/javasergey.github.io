@@ -1,0 +1,284 @@
+
+body{
+	background-color: white;
+}
+
+.col-sm{
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+
+.top-menu{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	z-index: 5;
+	background-color: white;
+	top:0;
+	width: 100%;
+	border-bottom: 1px solid #EEEEEE;
+	display: none;
+	position: absolute;
+	a{
+		display: block;
+		text-decoration: none;
+		color: black;
+		font-weight: ligher;
+		margin:10px 10px 10px 10px;
+		font-family: 'Playfair Display', serif;
+		transition: .3s;
+		padding:0px 10px;
+		border-radius: 2px;
+
+		&:hover{
+	
+			transform: scale(1.1);
+		}
+	}
+}
+
+
+.header{
+	min-width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-bottom: .5px solid #E8E8E8;
+
+	h2{
+		font-family: 'Permanent Marker', cursive;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	h3{
+		font-family: Indie Flower;
+		font-size: 45px;
+		margin: 5px;
+		margin-top: 0;
+	}
+	.about-love{
+		text-align: center;
+		font-size: 12px;
+		color: white;
+		background-color: black;
+		margin-top: 5px;
+		text-shadow: .3px .3px .3px white;
+		letter-spacing: 2.3px;
+	}
+	.headers{
+		cursor: pointer;
+		position: relative;
+		margin-top: 50px;
+	}
+}
+
+.header-menu{
+	margin:0;
+	padding:0;
+	list-style: none;
+	display: flex;
+	margin-top: 20px;
+	a{
+		display: block;
+		text-decoration: none;
+		color: black;
+		font-weight: ligher;
+		margin:0px 10px 20px 10px;
+		font-family: 'Playfair Display', serif;
+		transition: .3s;
+		padding:0px 10px;
+		border-radius: 2px;
+		&:hover{
+			transform: scale(1.1);
+		}
+	}
+}
+
+
+/*----------------------------   CAROUSEL   -------------------------------*/
+
+
+.carousel{
+	margin:0 auto;
+	width: 1000px;
+	top: 300px;
+
+	img{
+		border-radius: 4px;
+
+	}
+}
+
+
+/*------------------------------   PORTFOLIO   ------------------------------*/
+
+
+.portfolio{
+	top: 1100px;
+	position: absolute;
+	margin:0 auto;
+
+}
+
+.row-portfolio{
+	display: flex;
+}
+
+.port-item{
+	margin:0 5px;
+	transition: .7s ease;
+	
+	&:hover{
+		opacity:.7;
+
+	} 
+	img{
+		cursor: pointer;
+		border-radius: 4px;
+		transition: .7s;
+		&:hover{
+			transform: scale(1.03);
+		}
+
+	}
+	.item-name{
+		text-align: center;
+		margin: 5px 0;
+		text-transform: uppercase;
+		color: #707070;
+		font-size: 9.5px;
+		letter-spacing: 2px;
+
+	}
+}
+
+
+.port-item a{
+	
+	img{
+		width: 325px;
+
+	}
+}
+
+
+/*-------------------------   BUTTON   ---------------------------*/
+
+
+.to-top-button{
+	display: none;
+	position: fixed;
+	right: 5%;
+	bottom: 5%;
+	/*top: 580px;*/
+	cursor: pointer;
+	z-index: 5;
+	width: 30px;
+	height: 30px;
+	padding-top: 13px;
+	padding-left: 6px;
+	padding-right: 10px;
+	transition: .5s;
+	border-radius: 50%;
+	&:hover{
+		transform:scale(1.4);		
+	}	
+
+	span{
+		display: block;
+		width: 12px;
+		height: 2px;
+		background-color: #616161;
+	}
+	.to-top-span-1{
+		transform: rotate(55deg);
+		position: relative;
+		left: 6px;
+		top: 2px;		
+	}
+	.to-top-span-2{
+		transform: rotate(-55deg);
+	}
+}
+.to-top-button-span-2{
+	top: 6px;
+	position: absolute;
+}
+
+
+/*------------------------------   FOOTER   --------------------------------*/
+
+
+
+.footer{
+	width: 100%;
+	border-top: 1px solid #EBEBEB;
+	position: absolute;
+	top: 2920px;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #9E9E9E;
+	font-size: 9px;
+	
+	.social{
+		display: flex;
+		margin-top: 40px;
+	}
+	.soc{
+		display: block;
+		width: 23px;
+		height: 23px;
+		background-color: #7A7A7A;
+		border-radius: 50%;
+		display: flex;	
+		justify-content: center;
+		align-items: center;
+		margin:0 2px;
+		img{
+			width:14px;
+			height: 14px;
+		}
+		.soc-in{
+			width:12px;
+			height: 12px;
+		}
+
+		&:hover{
+			background-color: black;
+		}
+		
+	}
+	.copyright, .me{
+		margin: 0;
+		padding:0;
+	}
+	.copyright{
+		margin-top: 15px;
+	}
+	.me{
+		margin-bottom: 30px;
+		a{
+			color: #9E9E9E;
+			text-decoration: none;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,217 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.to-top-button{
+		right:2%;
+	}
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	.carousel{
+		width:100%;
+	}
+	.portfolio{
+		top: 1050px;
+	}
+	.port-item a img{
+		width: 225px;
+	}
+	.port-item .item-name{
+		font-size: 8px;
+	}
+
+	.footer{
+		top: 2350px;
+	}
+	.fancybox-content{
+		width: 70%;
+		height: 70%;
+	}
+
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	
+	.carousel{
+		width:550px;
+	}
+	.portfolio{
+		top: 750px;
+	}
+	.port-item a img{
+		width: 177px;
+	}
+	.port-item .item-name{
+		letter-spacing: 1px;
+		font-size: 7px;
+	}
+
+	.footer{
+		top: 1820px;
+	}
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	.carousel{
+		/*width:530px;*/
+		width:100%;
+	}
+	.portfolio{
+		top: 750px;
+	}
+	.port-item{
+		margin:0 15px;
+	}
+
+	.port-item a img{
+		/*width: 530px;*/
+		width:100%;
+	}
+	.port-item .item-name{
+		letter-spacing: 1px;
+		font-size: 12px;
+	}
+
+	.footer{
+		top: 9350px;
+	}
+	.row-portfolio{
+		display: block;
+	}
+	.footer .soc{
+		width:30px;
+		height: 30px;
+	}
+	.footer{
+		font-size: 11px;
+	}
+	.footer .soc img{
+		width:17px;
+		height: 17px;
+	}
+	.footer .soc .soc-in{
+		width: 16px;
+		height: 16px;
+	}
+}
+
+
+@media screen and (max-width: 550px){
+	.footer{
+		top: 9050px;
+	}
+}
+@media screen and (max-width: 530px){
+	.footer{
+		top: 8700px;
+	}
+}
+@media screen and (max-width: 510px){
+	.footer{
+		top: 8400px;
+	}
+}
+@media screen and (max-width: 490px){
+	.footer{
+		top: 8100px;
+	}
+}
+@media screen and (max-width: 470px){
+	.footer{
+		top: 7800px;
+	}
+}
+@media screen and (max-width: 450px){
+	.footer{
+		top: 7500px;
+	}
+}
+@media screen and (max-width: 430px){
+	.footer{
+		top: 7200px;
+	}
+	.copyright{
+		font-size: 9px;
+	}
+}
+@media screen and (max-width: 410px){
+	.footer{
+		top: 6850px;
+	}
+}
+@media screen and (max-width: 380px){
+	.footer{
+		top: 6500px;
+	}
+	.top-menu a{
+		padding:0 7px;
+		margin:5px 8px;
+	}
+	.header-menu{
+		margin-top: 0;
+	}
+	.header-menu a{
+
+		margin: 17px 4px;
+		font-size: 14px;
+	}
+	.me{
+			font-size: 10px;
+	}
+}
+@media screen and (max-width: 350px){
+	.footer{
+		top: 6000px;
+	}
+	.copyright{
+		font-size: 8px;
+	}
+}
+@media screen and (max-width: 320px){
+	.footer{
+		top: 5600px;
+	}
+	.me{
+			font-size: 9px;
+		}
+}
+@media screen and (max-width: 290px){
+	.footer{
+		top: 5700px;
+	}
+}
+
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+	
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
