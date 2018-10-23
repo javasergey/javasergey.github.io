@@ -1,0 +1,677 @@
+@import "vars";
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+@include media-breakpoint-down(lg) {
+	.header-main-content h1{
+		font-size: 44px;
+	}
+	.header .header-main-content .header-27{
+		right: 0;
+	}
+	
+	.header .nav .nav-menu a{
+	
+		font-size: 14px;
+		padding:24px 4px;
+	}
+	.header .nav .nav-menu{
+		
+
+		/*display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;*/
+		z-index: 10;
+	}
+
+	.header .nav .header-logo{
+		margin-left: -30px;
+	}
+	.positions-item{
+		margin:0 15px;
+	}
+	
+	.service-row{
+		width: 100%;
+	}
+	.infrastructure-map{
+		width: 100%;
+	}
+	.infrastructure .owl-carousel{
+
+	}
+	.form-2 .form .form-main .form-2-inputs .form-input-text{
+		width: 207px;
+	}
+	.footer-ht-media{
+		margin-left: 450px;
+	}
+	.footer-c{
+		margin-left: 500px;
+	}
+	.nav .col-12 .nav-phones{
+		left:805px;
+	}
+	.nav .col-12 .header-logo{
+		left: 50px
+	}
+	
+	.positions{
+		display: block;
+	}
+	.positions-adaptive{
+		display: none;
+	}
+	.video-section{
+		display: block;
+
+	}
+	.video-section-adaptive{
+		display: none;
+	}
+
+
+
+	.partners .partners-main img{
+		width: 440px;
+	}
+	.positions-adaptive-mobile{
+		display: none;
+	}
+	
+	.about .about-img img{
+		width: 450px;
+	}
+
+}
+
+// ≥992px
+@include media-breakpoint-down(md) {
+	.header .nav .nav-menu{
+		display: none;
+	}
+	.header-logo{
+		left: 0;
+
+	}
+	.header .col-12{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.form-2 .form-img{
+		display: none;
+	}
+	.footer .col-12{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.footer .col-12 .footer-ht-media{
+		margin-top: 20px;
+		position: relative;
+	}
+	.footer .col-12 .footer-c{
+		margin-top: 30px;
+	}
+	.footer .col-12 .footer-descr{
+		margin-top: 15px;
+		margin-bottom: 20px;
+	}
+	.footer .col-12 p{
+		margin:0;
+		top: 0;
+		left: 0;
+		margin:0 100px;
+
+	}
+	.form-2 .col-12 .form-main{
+		margin-top: 0;
+		padding-bottom: 30px;
+	}
+	.nav .col-12 .nav-phones{
+		left:515px;
+	}
+	.nav .col-12 .header-logo{
+		/*left: 130px;*/
+		margin-left: -50px;
+	}
+	.nav .col-12 .nav-button{
+		display: block;
+		left:640px;
+		top: 0;
+	}
+	.header-content .header-main-content .header-27{
+		display: none;
+	}
+	.header-content .header-main-content h1{
+		font-size: 36px;
+	}
+	.header-content .header-main-content .header-bricks{
+		font-size: 26px;
+	}
+	.header-content{
+		top: 180px;
+	}
+	
+	.header .nav .nav-menu{
+		width: 100%;
+		height: 430px;
+		display: none;
+		background-color: white;
+		margin:0;
+		top: 0px;
+		left:0px;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin:0 auto;
+		position: absolute;
+		box-sizing: border-box;
+		padding-top: 100px;
+
+		z-index: 1;
+
+
+	}
+	.header .nav .nav-menu a{
+		text-align: center;
+		padding:10px 9px;
+		font-size: 15px;
+	}
+
+	.positions{
+		display: none;
+	}
+	.positions-adaptive{
+		display: block;
+	}
+	.video-section{
+		display: none;
+
+	}
+	.video-section-adaptive{
+		display: block;
+	}
+
+	.video-section-adaptive .advantage-row{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin:0 40px;
+	}
+	.video-section-adaptive .advantage-item{
+		
+	}
+	.infrastructure .header-infr{
+		font-size: 32px;
+	}
+	.infrastructure .infr-numbers-row{
+		display: block;
+	}
+
+
+
+	.infrastructure .ow-item{
+		display: block;
+	}
+	.infrastructure .ow-item img{
+
+		width: 100%;	
+	}
+	.infrastructure .owl-slider-header{
+		margin-top: 30px;
+	}
+	.infrastructure .owl-stage-outer{
+		padding-bottom: 400px;
+	}
+
+	.service{
+		display: none;
+	}
+	.service-adaptive{
+		display: block;
+	}
+
+
+	.form .form-img{
+		display: none;
+	}
+	.form{
+		height: 450px;
+	}
+	.form .form-main{
+		margin-top:40px;
+	}
+
+
+
+	.news .ow-item{
+		display: block;
+	}
+	.news .ow-item img{
+
+		width: 100%;	
+	}
+	.news .owl-slider-header{
+		margin-top: 30px;
+	}
+	.news .owl-stage-outer{
+		padding-bottom: 400px;
+	}
+
+
+
+	.mortgage{
+		display: none
+	}
+	.mortgage-adaptive{
+		display: block;
+
+	}
+	.mortgage-adaptive .mortgage-banks-item{
+		width: 280px;
+
+	}
+	.mortgage-adaptive .mortgage-banks-item img{
+		width: 100%;
+	}
+	.mortgage-adaptive .mortgage-bansk{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30px
+	}
+	.mortgage-adaptive .mortgage-bansk-3{
+		display: flex;
+		justify-content: flex-start;
+	}
+	.partners .partners-main{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+	}
+	.partners .partners-main img{
+		
+		width: 100%;
+		margin:15px 0;
+	}
+
+
+
+	.contacts .contacts-row{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.contacts .contacts-row .contacts-row-item{
+		width: 100%;
+		margin:15px 0;
+	}
+
+
+	.form-2 .form .form-main{
+		padding-bottom: 0;
+		margin-top: 50px;
+
+	}
+	.form-2{
+		height: 366px;
+	}
+
+
+	.about .about-img img{
+		width: 330px;
+	}
+
+
+	.service-adaptive .col-12 .service-header{
+		font-size: 33px;
+	}
+
+}
+
+// ≥768px
+@include media-breakpoint-down(sm) {
+	
+	.header .nav .header-logo{
+		/*margin-left: 0;
+		left: 0px;*/
+	}
+	.header .nav .nav-button{
+		/*left: none;
+		right: 10px;*/	
+		left:250px;
+		z-index: 50;
+
+	}
+	.header .nav .nav-phones{
+		width: 130px;
+		left: 350px;
+	}
+	.mortgage-adaptive .mortgage-bansk-3{
+		width: 229px;
+	}
+	.mortgage-adaptive .mortgage-bansk-3 img{
+		width: 229px;
+		
+	}
+
+	.header .nav .col-12{
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.header .header-main-content h1{
+		font-size: 28px;
+	}
+	.header .header-span-1{
+		width:70%;
+	}
+	.header .header-span-2{
+		width: 100%;
+	}
+	.header .header-span-3{
+		width:70%;
+	}
+	.header .header-main-content .header-bricks{
+		font-size: 21px;
+		margin-top: 15px;
+	}
+	.header .header-description{
+		line-height: 1.2;
+		margin:0 5px;
+	}
+
+
+	
+
+	
+
+	.positions-adaptive .positions-row-item{
+		display: none;
+	}
+	.positions-adaptive .positions-header{
+		display: none;
+	}
+	.positions-adaptive-mobile{
+		display: block;
+	}
+
+	.positions-adaptive-mobile .positions-row-item{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.positions-adaptive-mobile .positions-item{
+		width: 100%;
+		margin-top: 25px;
+	}
+
+	.mortgage-adaptive{
+		
+	}
+	
+
+	.about .about-img{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.about .about-img img{
+		width: 100%;
+	}
+	.about .about-img-img{
+		margin-top: 20px;
+	}
+	.about .about-header{
+		font-size: 33px;
+	}
+
+
+
+	.form .form-main .form-header{
+		font-size: 28px;
+	}
+
+	.documents .documents-header{
+		font-size: 30px;
+	}
+
+
+
+	.about .about-header{
+		font-size: 26px;
+	}
+
+
+
+	.campaign .campaign-header{
+		font-size: 30px;
+	}
+
+
+
+	.news .news-header{
+		font-size: 30px;
+	}
+
+
+	.partners .partners-header{
+		font-size: 30px;
+	}
+
+	.contacts .contacts-header{
+		font-size: 30px;
+	}
+
+
+
+	.video-section-adaptive .advantage-row{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.video-section-adaptive .advantage-row .advantage-item p{
+		font-size: 16px;
+		line-height: 1.4;
+	}
+
+
+	.service-adaptive .service-row-item p{
+		line-height: 1.2;
+		font-size: 14px;
+	}
+
+	.service-adaptive .service-row{
+		height: 192px;
+	}
+
+}
+
+// ≥576px
+@include media-breakpoint-down(xs) {
+	
+	.header .nav .header-logo{
+		left: 100px;
+	}
+	.header .nav .nav-phones{
+		
+		left:250px;
+		margin:0;
+		position: absolute;
+	}		
+	.header .nav .nav-button{
+			
+		top: 20px;
+		left:390px;
+		margin:0;
+		position: absolute;
+
+	}
+	
+	.footer .col-12 .footer-descr{
+		margin:20px 5px;
+	}
+
+	.form-2 .form .form-main .form-header{
+		font-size: 30px;
+	}
+	.form-2 .form .form-main .form-2-inputs .form-input-text{
+		width: 100%;
+	}
+
+	.infrastructure .header-infr{
+		line-height: 1.4;
+		font-size: 27px;
+	}
+
+	
+	.documents .general-info{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}	
+
+	.documents .general-right{
+		margin-left: 15px;
+	}
+
+	.mortgage-adaptive .mortgage-bansk-3 .mortgage-banks-item{
+		display: none;
+	}
+	.mortgage-adaptive .mortgage-bansk-3 .mortgage-banks-item img{
+		width: 100%;
+	}
+
+
+
+	.mortgage-adaptive .mortgage-banks-item-ul li{
+		line-height: 1.4;
+		font-size: 14px; 
+	}
+
+
+	.footer p{
+		font-size: 14px;
+	}
+
+
+	.service-adaptive .col-12 .service-header{
+		font-size: 26px;
+	}
+	.service-adaptive .col-12 .service-header-2{
+		font-size: 18px;
+	}
+
+
+	.owl-carousel .slider-content .owl-slider-header{
+		font-size: 30px;
+	}
+	.owl-carousel .slider-content .owl-slider-descr{
+		font-size: 15px;
+	}
+
+	.news .owl-stage-outer{
+		height: 600px;
+	}
+
+	.form-2 .form .form-main .form-header{
+		font-size: 27px;
+	}
+
+	.form-2 .form .form-main .form-header-2{
+		font-size: 18px;
+	}
+	.documents .general-right{
+		margin-left: 0;
+	}
+
+}
+
+
+
+@media screen and (max-width: 440px){
+
+	.header .nav .header-logo{
+		left: 60px;
+	}
+	.header .nav .nav-phones{
+		
+		left:150px;
+		margin:0;
+		position: absolute;
+	}		
+	.header .nav .nav-button{
+			
+		top: 20px;
+		left:290px;
+		margin:0;
+		position: absolute;
+
+	}
+
+
+	.service-adaptive .service-row{
+		height: 140px;
+	}
+	
+
+	.form .form-main form .form-input-text{
+		width: 100%;
+	}
+
+	.form .form-main .form-checkbox label{
+		font-size: 11px;
+	}
+
+	.form .form-main .form-header{
+		font-size: 25px;
+	}
+	.form .form-main .form-header-2{
+		font-size: 18px;
+		line-height: 1.3;
+	}
+
+
+	.footer p{
+		width: 300px;
+	}
+	
+
+
+}
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+@include media-breakpoint-up(sm) {
+	
+}
+
+// ≤768px
+@include media-breakpoint-up(md) {
+
+}
+
+// ≤992px
+@include media-breakpoint-up(lg) {
+
+}
+
+// ≤1200px
+@include media-breakpoint-up(xl) {
+	
+}
