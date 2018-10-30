@@ -1,0 +1,253 @@
+body{
+	width: 100%;
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	
+
+	.container{
+		width: 60%;
+
+		.col-12{
+			display: flex;
+
+		}
+	}
+}
+
+.lside{
+	background-color: #2B5A84;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding:0 32px;
+
+	.name{
+		margin-top: 70px;
+		font-size: 28px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.first-name{
+			color: #F9F9F9;
+		}
+
+		p{
+			line-height: 1;
+		}
+		
+		.name-descr{
+			font-size: 16px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: #F1F1F1;
+		}
+	}
+
+	.objective{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-top: 50px;
+
+		.obj-title{
+
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			p{
+				margin-top: 12px;
+				font-size: 25px;
+				margin-left: 10px;
+			}
+		}
+		.obj-descr{
+			font-size: 13px;
+			line-height: 1.4;
+			margin-left: 40px;
+		}
+	}
+
+
+	.general{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-top: 30px;
+
+		.general-title{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			p{
+				margin-top: 12px;
+				font-size: 25px;
+				margin-left: 10px;
+			}
+		}
+
+		.gen-info{
+			font-size: 12px;
+			margin-left: 40px;
+
+			p{
+				line-height: 1;
+			}
+		}
+	}
+
+	.contacts{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-content: center;
+		margin-top: 30px;
+		width: 100%;
+		
+
+		.contacts-title{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			p{
+				margin-top: 12px;
+				font-size: 25px;
+				margin-left: 10px;
+			}
+		}
+
+		.contacts-item-container{
+			margin-left: 40px;
+
+			.cont-item{
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				line-height: 1;
+
+				p{
+					font-size: 13px;
+					margin-top: 15px;
+					margin-left: 10px;
+				}
+			}
+		}
+		
+	}
+
+
+	.social{
+		margin-top: 30px;
+		margin-bottom: 50px;
+
+		a{
+			margin:0 2px;
+		}
+	}
+
+}
+
+
+.rside{
+	background-color: white;
+	color: black;
+	padding:0 40px;
+
+
+
+	.education{
+		font-size: 25px;
+		margin-top: 50px;
+		.edu-cont{
+			display: flex;
+			font-size: 14px;
+			margin-top: 20px;
+
+			.edu-study{
+				margin-left: 40px;
+				color: #424242;
+
+
+				p{
+					line-height: 1.2;
+				}
+			}
+		}
+	}
+
+
+
+
+
+	.progress-bars-main{
+		color: #313131;
+		margin-top: 50px;
+
+		.progress-header{
+			font-size: 25px;
+		}
+
+		.progress-bar-item{
+			margin-bottom: 10px;
+		}
+		label{
+			line-height: .2;
+			margin-top: 20px;
+		}
+		
+	}
+
+	.progress{
+		margin-top: 5px;
+		height: 5px;
+		background-color: #F1F1F1;
+		display: flex;
+		margin-left: 20px;
+
+		.progress-bar{
+			background-color: #4D9ADE;
+
+		}
+	}
+
+	.portfolio{
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		a{
+			display: block;
+			color: black;
+			font-size: 14px;
+		}
+
+		.portfolio-header{
+			font-size: 25px;
+		}
+	}
+
+
+	.about{
+		margin-top: 20px;
+
+		.about-header{
+			font-size: 25px;
+		}
+
+		.about-me{
+			font-size: 13px;
+			line-height: 1.2;
+			
+		}
+	}
+}
+
