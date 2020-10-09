@@ -225,7 +225,7 @@ a:hover {
 
 .fixed-buttons {
   position: fixed;
-  top: 560px;
+  bottom: 30px;
   right: 25px;
   display: flex;
   flex-direction: column;
