@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>дрибл</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Rowdies:wght@700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="app">
+
+    <header>
+      <div class="header-top-bar" :class="{'header-top-bar-hide': notificationBarHide}">Looking to hire freelance or
+        full-time designers? Our <a href="#">brand new Designer Search</a> allows you to find the perfect candidate - <a
+          href="#">check it out today</a>!
+        <span @click="closeTopBar">&#10006;</span>
+      </div>
+      <div class="header-bar d-flex justify-content-between" @mouseleave="hoverout">
+        <div class="burger">
+
+          <div id="nav-icon1" :class="{'open': openBurger1}" @click="burgerClick1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </div>
+        <div class="header-bar-left d-flex ">
+          <div class="header-logo mr-md-4 mt-2">
+            <img class="header-logo ml-md-0 ml-xs-4" src="./assets/dribbble-4.svg" alt="" />
+          </div>
+          <div class="header-bar-menu">
+            <span class="mr-4" @mouseover="hover">Explore&nbsp;<img src="./assets/down-arrow.png" alt="" /></span>
+            <span class="mr-4" @mouseover="hover">For Designers&nbsp;<img src="./assets/down-arrow.png" alt="" /></span>
+            <span class="verticalLine "></span>
+            <span @mouseover="hover">Hiring Designers?&nbsp;<img src="./assets/down-arrow.png" alt="" /></span>
+          </div>
+        </div>
+
+        <div class="header-bar-right d-flex align-items-center">
+          <img src="./assets/search.png" class="mr-4" alt="" /><a href="#" class="mr-md-4">Sign in</a><button
+            class="btn btn-primary ">Sign Up</button>
+        </div>
+        <div class="header-bar-submenu" :class="{'toggleHeaderSubmenu': toggleHeaderSubmenu, 'hoverOut': hoverOut}">
+          <ul class="d-flex header-bar-submenu-items ">
+            <li class="header-bar-submenu-item " @click="hoverout">
+              <img src="./assets/submenu-item1.jpg" class="w-100" alt="">
+              <div class="submenu-item-text ml-1">
+                <h4>Shots</h4>
+                <p>Get inspired with designs shared by our talented community</p>
+              </div>
+            </li>
+            <li class="header-bar-submenu-item " @click="hoverout">
+              <img src="./assets/submenu-item6.jpg" class="w-100" alt="">
+              <div class="submenu-item-text ml-1">
+                <h4>Top designers</h4>
+                <p>Check out the rankings and see which designers are trending</p>
+              </div>
+            </li>
+            <li class="header-bar-submenu-item " @click="hoverout">
+              <img src="./assets/submenu-item2.png" class="w-100" alt="">
+              <div class="submenu-item-text ml-1">
+                <h4>Blog</h4>
+                <p>Amazing interviews with design industry leaders, tutorials, and more</p>
+              </div>
+            </li>
+            <li class="header-bar-submenu-item " @click="hoverout">
+              <img src="./assets/submenu-item3.jpg" class="w-100" alt="">
+              <div class="submenu-item-text ml-1">
+                <h4>Weekly Warm-Up</h4>
+                <p>Join the fun and flex your design skills with our weekly prompt</p>
+              </div>
+            </li>
+            <li class="header-bar-submenu-item " @click="hoverout">
+              <img src="./assets/submenu-item4.jpg" class="w-100" alt="">
+              <div class="submenu-item-text ml-1">
+                <h4>Playoffs</h4>
+                <p>See Shots that other designers are riffing on & participate yourself</p>
+              </div>
+            </li>
+            <ul>
+              <li><a href="#">Teams</a></li>
+              <li><a href="#">Goods for Sale</a></li>
+              <li><a href="#">Meetups</a></li>
+              <li><a href="#">Dribbble Shop</a></li>
+              <li><a href="#">About Dribbble</a></li>
+              <li><a href="#">Advertise</a></li>
+            </ul>
+
+          </ul>
+
+        </div>
+        <div class="header-bar-mobile-menu w-100" :class="{'header-bar-mobile-menu-active': mobileMenuActive}">
+          <ul class="mobile-menu-items mx-4 ">
+            <li class="mobile-menu-input "><i class="fa fa-search fa-lg"></i><input type="text" class="w-100"
+                placeholder="Search"></li>
+            <li class="mobile-menu-item w-100 d-flex justify-content-between align-items-center"><span>Explore</span><i
+                class="fa fa-angle-down fa-lg"></i></li>
+            <li class="mobile-menu-item w-100 d-flex justify-content-between align-items-center"><span>For
+                Designers</span><i class="fa fa-angle-down fa-lg"></i></li>
+            <li class="mobile-menu-item w-100 d-flex justify-content-between align-items-center"><span>Hiring
+                Designers?</span><i class="fa fa-angle-down fa-lg"></i></i>
+
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="header-content">
+        <div class="container">
+          <div class="row d-flex justify-content-end">
+
+            <div
+              class="header-content-left col-md-6 d-flex flex-column align-items-md-start align-items-sm-center pl-4 pr-4">
+              <h1>Посмотрите the world’s top designers & creatives</h1>
+              <span>дрибл is the leading destination to find & showcase
+                creative work and home to the world's best design professionals.</span>
+              <button class="btn  btn-primary mt-4">Sign Up</button>
+            </div>
+
+
+            <div class="header-content-right col-md-6 d-flex  flex-column align-items-md-end align-items-sm-center ">
+              <img src="./assets/header-content.png" alt="" />
+              <span class="mt-4">Art by <a href="#">Romain Briaux</a></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <section class="main-content">
+      <div class="container">
+        <div class="row">
+
+          <div class="main-content-bar w-100 ">
+            <div class="popular-container">
+              <div class="main-content-bar-popular d-flex justify-content-between align-items-center "
+                @click="popup = !popup" v-out="popup">
+                <span class="mr-4">Popular</span><img src="./assets/down-arrow.png" alt=""
+                  :class="{'popular-active': popularActive}" />
+              </div>
+
+              <ul class="popular-dropdown" v-if="popup">
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">New & Noteworthy</a></li>
+                <div class="horizontal-line my-1"></div>
+                <li><a href="#">Goods for Sale</a></li>
+              </ul>
+
+
+            </div>
+
+            <ul class="ul-categories  flex-wrap ">
+              <li v-for="li of contentMenu"><a href="#" class="active">{{li.name}}</a></li>
+            </ul>
+
+            <div class="main-content-bar-filters d-flex justify-content-between align-items-center " :class="{}">
+              <div class="filters-icon d-flex flex-column justify-content-center align-items-center ">
+                <span></span><span></span><span></span></div>
+              <span class="ml-2">Filters</span>
+            </div>
+          </div>
+
+          <ul class="ul-categories1 flex-wrap justify-content-center w-100  mt-4">
+            <li v-for="li of contentMenu"><a href="#" class="active">{{li.name}}</a></li>
+          </ul>
+
+          <div class="main-content-items w-100">
+            <div class="main-content-items-row mt-4 d-flex flex-wrap">
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+
+                <div class="main-content-item-picture">
+                  <img src="./assets/item1.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+
+                <div class="main-content-item-picture">
+                  <img src="./assets/item2.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava2.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item3.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava3.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item4.jpg" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava4.jpg" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item55.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item5.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item6.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item7.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item8.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+                <div class="main-content-item-picture">
+                  <img src="./assets/item7.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+
+                <div class="main-content-item-picture">
+                  <img src="./assets/item1.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava1.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="main-content-item col-lg-3 col-md-4 col-sm-6 col-xs-12 w-100 mb-4" @click="openFunc">
+
+                <div class="main-content-item-picture">
+                  <img src="./assets/item2.png" alt="">
+                </div>
+                <div class="main-content-item-info mt-2 d-flex justify-content-between align-items-center">
+                  <div class="item-info-left d-flex align-items-center">
+                    <img src="./assets/ava2.png" alt="" />
+                    <span class="item-info-left-1 ml-2">Makarov</span>
+                    <span class="item-info-left-2 ml-2">TEAM</span>
+                  </div>
+                  <div class="item-info-right mb-1">
+                    <span><i class="fa fa-comment"></i>53</span><span><i class="fa fa-heart"></i>412</span>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="continue-buttons py-4 w-100 d-flex justify-content-center align-items-center"><button class="btn">Sign up to continue</button><button class="btn">or sign
+        in</button></div>
+
+
+    <footer class="mt-4">
+      <div class="container">
+        <div class="row">
+
+          <div class="footer-main d-flex ml-xs-4  justify-content-between align-items-start w-100 px-sm-4 mx-xs-4">
+
+
+
+
+            <div class="footer-main-left col-xl-2 d-flex flex-column"><img
+                class="header-logo-bottom ml-md-0 ml-xs-4 mt-2" src="./assets/dribbble-4.svg" alt="" />
+              <span class="mt-4">Dribbble is the world’s leading community for creatives to share, grow, and get hired.
+              </span>
+              <div class="footer-main-icons d-flex flex-wrap mt-4">
+                <i class="fa fa-dribbble" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-pinterest" aria-hidden="true"></i></div>
+            </div>
+            <div class="footer-main-center mx-xl-4 px-xl-4 col-xl-8  d-flex justify-content-between align-items-start">
+              <div class="row w-100 d-flex justify-content-between align-items-start">
+
+
+                <div class="footer-main-columns-1 col-md-6 d-flex justify-content-between align-items-start">
+
+                  <div class="footer-main-columns w-100 d-flex flex-column">
+                    <a href="#"><b>For designers</b></a>
+                    <a href="#">Go pro!</a>
+                    <a href="#">Explore design work</a>
+                    <a href="#">Makarov blog</a>
+                    <a href="#">Overtime podcast</a>
+                    <a href="#">Dribbble meetups</a>
+                    <a href="#">Makarov</a>
+                    <a href="#">Weekly Warm-Up</a>
+                    <a href="#">Code of conduct</a>
+                  </div>
+                  <div class="footer-main-columns w-100 d-flex flex-column">
+                    <a href="#"><b>Hire designers</b></a>
+                    <a href="#">Post a job opening</a>
+                    <a href="#">Post of freelance project</a>
+                    <a href="#">Search for designers</a>
+                    <a href="#" class="mt-4"><b>Brands</b></a>
+                    <a href="#">Makarov</a>
+                  </div>
+
+
+                </div>
+
+
+                <div class="footer-main-columns-2 col-md-6 d-flex justify-content-between align-items-start">
+
+
+                  <div class="footer-main-columns w-100 d-flex flex-column">
+                    <a href="#"><b>Company</b></a>
+                    <a href="#">About</a>
+                    <a href="#">Makarov</a>
+                    <a href="#">closeTopBar</a>
+                    <a href="#">Terms of device</a>
+                    <a href="#">Support</a>
+                    <a href="#">Media kit</a>
+                    <a href="#">Dribbble shop</a>
+                    <a href="#">Testimonials</a>
+                    <a href="#">Makarov</a>
+                  </div>
+
+                  <div class="footer-main-columns w-100 d-flex flex-column">
+                    <a href="#"><b>Makarov</b></a>
+                    <a href="#">test3</a>
+                    <a href="#">Support</a>
+                    <a href="#">Dribbble shop</a>
+                    <a href="#">Shop creative market</a>
+                    <a href="#">Terms of device</a>
+                    <a href="#">Company</a>
+                    <a href="#" class="mt-4"><b>Design assets</b></a>
+                    <a href="#">Testimonials</a>
+                  </div>
+
+
+                </div>
+
+
+
+              </div>
+
+            </div>
+            <div class="footer-main-right mt-4 col-xl-2 d-flex flex-lg-row flex-xl-column"><img
+                src="./assets/footer-hotjar.png" width="130" alt="">
+              <div><span class="mt-1">Go beyond website analytics and understand what users are really doing</span><br>
+                <span>ADVERTISE ON DRIBBLE</span></div>
+
+            </div>
+          </div>
+          <!-- <div class="horizontal-line"></div> -->
+
+
+          <div class="footer-bottom d-flex  justify-content-between align-items-center w-100 px-lg-4 mx-lg-4">
+            <div class="footer-bottom-1 fbitems col-md-4 d-flex"><span>© 2020 Makarov. All rights reserved.</span>
+            </div>
+            <div class="footer-bottom-2 fbitems col-md-4 d-flex"><span class="fbitem-2-span"><span>Made with ♥ remotely
+                  from</span> <i>Grass Valley, California</i></span></div>
+            <div class="footer-bottom-3 fbitems col-md-4 d-flex"><span class="fbitem-3-span"><span><b>525,222,242</b>
+                  shots dribbbled</span> <img src="./assets/dribbble-5.svg" width="23" alt=""></span></div>
+          </div>
+
+
+        </div>
+      </div>
+    </footer>
+
+    <div class="main-content-item-open"
+      :class="{'contentItemClose': contentItemClose, 'contentItemOpen': contentItemOpen}">
+      <a href="#" class="main-content-item-close" @click="closeFunc"></a>
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+
+
+
+          <div class="main-content-item-container col-md-12">
+
+            <div class="item-content-header d-flex justify-content-between align-items-center">
+              <div class="item-content-header-left d-flex justify-content-between align-items-center">
+                <img src="./assets/content-item-avatar.jpg" alt="">
+                <div class="d-flex ml-4 mb-2 flex-column justify-content-start align-items-start">
+                  <h3 class="m-0"><b>Estaro - Task Management</b></h3>
+                  <span>by <a href="#"><b>Tran Mau Tri Tam ✪</b></a> for <a href="#"><b>UI8</b></a></span>
+                </div>
+              </div>
+              <div class="item-content-header-right"><button class="btn btn-primary mr-3">Save</button><button
+                  class="btn btn-primary"><i class="fa fa-heart"></i>&nbsp;Like</button></div>
+            </div>
+
+            <div class="item-main-content mt-3">
+              <img src="./assets/item1-content1.png">
+            </div>
+
+            <div class="horizontal-line mt-4 mb-3"></div>
+
+            <section class="item-info mt-4 d-flex justify-content-between align-items-start">
+              <div class="container">
+                <div class="row">
+
+                  <div class="item-info-left col-lg-8 col-md-12">
+                    <div class="item-left-links">
+                      <p>A new task management app concept I've created this weekend, hope you guys like it 🔥</p>
+                      <ul>
+                        <li>Used Illustrations:</li>
+                        <li><a href="#"><b>Sapiens</b></a></li>
+                        <li class="mb-3"><a href="#"><b>Jane Illustration Pack - UI8</b></a></li>
+                      </ul>
+                      --- <br>
+                      <span>🔥 <a href="#"><b>Our Marketplace</b></a> | <a href="#"><b>IG</b></a> | <a
+                          href="#"><b>FB</b></a> |
+                        <a href="#"><b>TW</b></a></span>
+                    </div>
+
+                    <div class="horizontal-line mt-4 mb-3"></div>
+
+                    <div class="comments-container">
+
+                      <div class="comments-top-bar d-flex justify-content-between align-items-center">
+                        <span class="comments-summary">8 Responses</span>
+                        <div class="comments-filter d-flex">
+                          <span class="mx-1">oldest</span>
+                          <span class="mx-1">newest</span>
+                          <span class="mx-1">liked</span>
+                        </div>
+                      </div>
+
+                      <div class="comments mt-3 pt-1">
+                        <div class="comments-item">
+                          <img src="./assets/commentava1.jpeg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jon Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">I LOVE this...</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 14
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>2</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava2.png" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Tyler Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Looks awesome dude.</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 16
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>26</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava3.jpg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jacob Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Dang that is nice!</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 18
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>4</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava4.jpg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jason Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Really solid as usual @John.</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 20
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>6</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava1.jpeg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jon Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">I LOVE this...</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 14
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>2</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava2.png" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Tyler Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Looks awesome dude.</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 16
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>26</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava3.jpg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jacob Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Dang that is nice!</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 18
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>4</span></div>
+                          </div>
+                        </div>
+
+                        <div class="horizontal-line mt-3 mb-3"></div>
+
+                        <div class="comments-item">
+                          <img src="./assets/commentava4.jpg" alt="">
+                          <div class="comment-main w-100">
+                            <div class="comment-title d-flex align-items-center">
+                              <span>Jason Makarov</span>
+                              <span>pro</span>
+                            </div>
+                            <p class="comment-text w-100 mt-2 mb-1">Really solid as usual @John.</p>
+                            <div class="comment-item-meta d-flex justify-content-between align-items-center">
+                              <span>about 20
+                                hours ago</span>
+                              <span><i class="fa fa-heart"></i>6</span></div>
+                          </div>
+                        </div>
+
+
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+                  <div class="item-info-right col-lg-4 col-md-12 ">
+                    <div class="item-info-right-hire d-flex justify-content-start align-items-start flex-column">
+                      <span class="">Like what you see?</span><span class="mt-1">This team is available for work.
+                      </span>
+                      <div class="btn w-100 mt-2"><i class="fa fa-envelope"></i> Hire Us</div>
+
+                    </div>
+                    <div class="horizontal-line mt-3 mb-3"></div>
+                    <div class="item-info-right-tags w-100">
+                      <div class="tags-buttons w-100 d-flex justify-content-between align-items-center">
+                        <button class="btn w-100"><i class="fa fa-pinterest fa-lg"></i>Pin</button>
+                        <button class="btn w-100"><i class="fa fa-twitter fa-lg"></i>Tweet</button>
+                        <button class="btn w-100"><i class="fa fa-link fa-lg"></i>Copy</button>
+                      </div>
+                      <div class="tags ">
+                        <i class="fa fa-tag fa-lg"></i>
+                        <ul class="d-flex flex-wrap ml-4 pl-2">
+                          <li><a href="#">some</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometagssome</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometags</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometagssome</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">some</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometags</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometagssome</a></li>
+                          <li><a href="#">tags</a></li>
+                          <li><a href="#">sometags</a></li>
+                          <li><a href="#">tags</a></li>
+                        </ul>
+                      </div>
+                      <div class="palette w-100 d-flex mt-3">
+                        <i class="fa fa-tint fa-lg"></i>
+                        <ul class="palette-item d-flex ml-3 ">
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                        </ul>
+                      </div>
+
+                      <div class="item-info-right-likes d-flex align-items-center mt-3">
+                        <i class="fa fa-heart "></i>
+                        <span class="ml-2"><b>128 likes</b></span>
+                      </div>
+                      <div class="item-info-right-saves d-flex align-items-center mt-3">
+                        <i class="fa fa-plus-square"></i>
+                        <span class="ml-2"><b>3 saves</b></span>
+                      </div>
+                      <div class="item-info-right-date d-flex align-items-center mt-3">
+                        <i class="fa fa-calendar"></i>
+                        <span class="ml-2"><b>Sep 8, 2020</b></span>
+                      </div>
+
+                      <div class="horizontal-line mt-3 mb-3"></div>
+
+                      <div class="item-info-right-adv d-flex flex-column justify-content-between align-items-center">
+                        <img src="./assets/creative-market.png" width="120" alt="">
+                        <div class="right-adv-text d-flex flex-column justify-content-between align-items-center">
+                          Elevate
+                          your portfolio with millions of unique, ready-to-use design assets<span
+                            class="right-adv-text-span">advertise on dribbble</span></div>
+                      </div>
+
+                      <div class="horizontal-line mt-3 mb-3"></div>
+
+                      <div class="more-from-user">
+                        <h3>More from Tran Mau Tri Tam ✪</h3>
+                        <ul class="d-flex flex-wrap">
+                          <li class="p-2"><img src="./assets/morefromuser1.jpg" width="100" alt=""></li>
+                          <li class="p-2"><img src="./assets/morefromuser2.jpg" width="100" alt=""></li>
+                          <li class="p-2"><img src="./assets/morefromuser3.jpg" width="100" alt=""></li>
+                          <li class="p-2"><img src="./assets/morefromuser4.jpg" width="100" alt=""></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </section>
+
+            <div class="horizontal-line mt-3 mb-3"></div>
+
+            <div class="item-keyboard-shortcuts d-flex justify-content-center align-items-center">
+              <span class="mx-sm-2">keyboard shortcuts:</span>
+              <span class="mx-sm-2">
+                < previous shot</span>
+                  <span class="mx-sm-2"> > next shot</span>
+                  <span class="mx-sm-2"><b>Esc</b> close</span>
+                  <span class="mx-sm-2"><b>L</b> or <b>F</b> like</span>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/cf1da9e3c2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

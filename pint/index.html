@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pint</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Rowdies:wght@700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="header-top-bar w-100 d-flex justify-content-between align-items-center">
+        <div class="header-logo d-flex justify-content-between align-items-center">
+          <i class="fa fa-pinterest mr-sm-2"></i>
+          <div class="top-bar-left-mobile  justify-content-center align-items-center"
+            :class="{'active-mobile-button': mobileMain}" @click="mobileMain = !mobileMain" v-out="mobileMain">
+            <span>Главная</span><i class="fa fa-lg ml-1 mt-1 fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="top-bar-left mr-4  align-items-center">
+          <button class="btn">Главная</button>
+          <button class="btn">Подписки</button>
+        </div>
+
+        <ul class="mobile-submenu" v-if="mobileMain">
+          <li class="d-flex justify-content-between align-items-center"><a href="#">Главная</a><i
+              class="fa fa-lg mb-2 fa-check"></i></li>
+          <li><a href="#">Подписки</a></li>
+        </ul>
+        <div class="input-container w-100 "><input type="text" placeholder="Поиск"><i class="fa fa-search"></i>
+        </div>
+        <div class="top-bar-right ml-2 d-flex justify-content-between align-items-center">
+          <span><i class="fa fa-search"></i></span>
+          <span class="bell-notification"><div class="num">1</div><i class="fa fa-bell"></i></span>
+          <span><img src="./assets/comment.png" alt=""></span>
+          <span><img src="./assets/user-icon.jpg" class="user-icon" alt=""></span>
+          <span><i class="fa fa-angle-down"></i></span>
+        </div>
+
+      </div>
+    </header>
+
+    <section class="main-content d-flex justify-content-center align-items-start">
+      <ul class="items-container my-masonry-grid">
+        <li class="item-container my-masonry-grid-item mx-2" v-for="n of item" :key="n.id">
+          <img :src="n.name" alt="item picture">
+          <button class="btn item-save-button" >Сохранить</button>
+          <div class="item-bottom-buttons">
+            <span class="mx-1"><i class="fa fa-lg mt-1 fa-download"></i></span>
+            <span class="mx-1"><i class="fa fa-lg mt-1 fa-ellipsis-h"></i></span>
+          </div>
+        </li>
+
+     
+      </ul>
+    </section>
+
+    <div class="fixed-buttons">
+      <span><i class="fa fa-plus"></i></span>
+      <span><i class="fa fa-question"></i></span>
+    </div>
+
+
+    <div>
+
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+      <script src="https://use.fontawesome.com/cf1da9e3c2.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+
+      
+      <script src="jquery.masonryGrid.js"></script>
+      <script src="script.js"></script>
+     
+</body>
+
+</html>
