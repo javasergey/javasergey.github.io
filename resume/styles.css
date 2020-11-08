@@ -46,6 +46,12 @@ h4{
   margin: 50px 0;
 }
 
+.job span{
+  color: rgb(43, 42, 42);
+  font-size: 14px;
+}
+
+
 .target p, .info span, .contacts span{
   font-size: 12px;
   font-weight: 600;
