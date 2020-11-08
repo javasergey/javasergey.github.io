@@ -1,0 +1,52 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h4{
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.wrapper{
+  background-color: #000000;
+}
+.container {
+  max-width: 800px;
+  background-color: rgb(206, 206, 206);
+}
+.left{
+  background-color:#2B5A84;
+  color: #ffffff;
+
+}
+.left a{
+    color: #ffffff;
+}
+.left h4{
+  margin-bottom: 30px;
+}
+.right{
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  font-size: 15px;
+}
+
+.right a{
+  color: #000000;
+}
+.left-item, .right-item{
+  padding: 0 12px;
+  margin: 50px 0;
+}
+
+.target p, .info span, .contacts span{
+  font-size: 12px;
+  font-weight: 600;
+}

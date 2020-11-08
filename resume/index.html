@@ -1,166 +1,110 @@
-<!DOCTYPE HTML>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Резюме</title>
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&family=Rowdies:wght@700&display=swap"
+    rel="stylesheet">
 
-	<title>resume</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-
-	
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-	<link rel="stylesheet" href="css/main.min.css">
-
-	<style>
-		
-	</style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-	
-<section class="main">
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<section class="lside col-5">
-					
-					<div class="name">
-						<p class="first-name">СЕРГЕЙ МАКАРОВ</p>
-						<p class="name-descr">веб разработчик</p>
+  <div id="app">
 
-					</div>
-					<div class="objective">
-						<div class="obj-title">
-							<img src="img/target.png" width='35' height="35" alt="">
-							<p class="obj">Цель</p>
-						</div>
-						<p class="obj-descr">Работать в коллективе. Получать опыт взаимодействия с другими членами команды. Совершенствоваться.</p>
-					</div>
+    <div class="wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="left col-md-5 col-sm-12 pt-4">
 
-					<div class="general">
-						<div class="general-title">
-							<img src="img/icon.png" width='35' height='35' alt="">
-							<p class="gen">Информация</p>
-						</div>
-						<div class="gen-info">
-							<p>Национальность: Русский</p>
-							<p>Дата рождения: 02.07.1988</p>
-							<p>Место рождения: Новочебоксарск</p>
-						</div>
-					</div>
+            <div class="left-item name text-center">
+              <h4>СЕРГЕЙ МАКАРОВ</h4>
+              <span>ВЕБ РАЗРАБОТЧИК</span>
+            </div>
+            <div class="left-item target">
 
-					<div class="contacts">
-						<div class="contacts-title">
-							<img src="img/phone-book.png" width='35' height="35" alt="">
-							<p class="cont-title">Контакты</p>
-						</div>
+              <h4><i class="fa fa-bullseye fa-lg"></i>&nbsp; Цель</h4>
+              <p class="ml-5">Работать в коллективе. Получать опыт взаимодействия с другими членами команды. Совершенствоваться.</p>
+            </div>
 
-						<div class="contacts-item-container">
-							
-							<div class="cont-item">
-								<img src="img/skyline.png" width='25' alt="">
-								<p>г. Чебоксары</p>
-							</div>
-							<div class="cont-item">
-								<img src="img/smartphone-call.png" width='25' alt="">
-								<p>8 927 843 67 52</p>
-							</div>
-							<div class="cont-item">
-								<img src="img/message.png" width='25' alt="">
-								<p>makarovsergei2020@gmail.com</p>
-							</div>
+            <div class="left-item info d-flex flex-column">
+              <h4><i class="fa fa-info-circle fa-lg"></i>&nbsp; Информация</h4>
+              <span class="ml-5 my-2">Национальность: Русский</span>
+              <span class="ml-5 my-2">Дата рождения: 02.07.1988</span>
+              <span class="ml-5 my-2">Место рождения: Новочебоксарск</span>
+            </div>
 
-						</div>
-						
-					</div>
+            <div class="left-item contacts d-flex flex-column">
 
+              <h4><i class="fa fa-address-book fa-lg"></i>&nbsp; Контакты</h4>
+              <span class="ml-4 pl-3 my-1"><i class="fa fa-home fa-2x mr-2"></i>&nbsp;г. Чебоксары</span>
+              <span class="ml-4 pl-3 my-1"><i class="fa fa-phone fa-2x mr-2"></i>&nbsp;8 927 843 67 52</span>
+              <span class="ml-4 pl-3 my-1"><i class="fa fa-envelope fa-2x mr-2"></i>&nbsp;makarovsergei2020@gmail.com</span>
+            </div>
 
-					<div class="social">
-						<a href="https://vk.com/miks182"><img src="img/vk-social-logotype.png" width='50' alt=""></a>
-						<a href="#"><img src="img/github-logo.png" width='50' alt=""></a>
-						<a href="#"><img src="img/facebook-logo-button.png" width='50' alt=""></a>
-					</div>
+            <div class="left-item soc d-flex justify-content-center">
+              <a href="http://vk.com/miks182"><i class="fa fa-vk fa-3x"></i></a>
+             
+            </div>
 
-				</section>
+          </div>
+          <div class="right col-md-7 col-sm-12 pt-4">
 
+            <div class="right-item edu">
 
-				<section class="rside col-7">
-					
-					<div class="education">
-						<div class="edu-header">Образование</div>
-						<div class="edu-cont">
-							<div class="edu-year">2013</div>
-							<div class="edu-study">
-								<p>Московский гуманитарно-экономический институт</p>
-								<p>Экономика и управление, Менеджмент организации</p>
-							</div>
-						</div>
-					</div>
+              <h4>Образование</h4>
+              <div class="edu-info d-flex mt-2">
+                <span>2013</span><span class="ml-4">
+                  <p>Московский гуманитарно-экономический институт</p>
+                  <p>Экономика и управление, Менеджмент организации</p>
+                </span>
 
+              </div>
+            </div>
 
+            <div class="right-item skills">
 
+              <h4>Навыки</h4>
+              <p> HTML, CSS, Javascript, (React, Vue - начальный уровень), jQuery, Bootstrap, MySQL, PHP. Адаптивная кроссбраузерная верстка.</p>
+            </div>
+            <div class="right-item portfolio">
+              <h4>Портфолио</h4>
+              <ol>
+                <li><a href="#">https://javasergey.github.io/resume</a></li>
+                <li><a href="#">https://javasergey.github.io/dribble</a></li>
+                <li><a href="#">https://javasergey.github.io/apple</a></li>
+                <li><a href="#">https://javasergey.github.io/pint</a></li>
+                <li><a href="#">https://javasergey.github.io/landing-1</a></li>
+                <li><a href="#">https://javasergey.github.io/landing-2</a></li>
+                <li><a href="#">https://javasergey.github.io/maria</a></li>
+                <li><a href="#">https://javasergey.github.io/sasha</a></li>
+              </ol>
+            </div>
 
+            <div class="right-item about">
 
-					<div class="progress-bars-main">
-						<h1 class="progress-header">Навыки</h1>
+              <h4>Обо мне</h4>
+              <p>В данный момент нахожусь в поиске работы. По мере приобретения опыта пополняю портфолио.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-						<p class="tech-stack">HTML, CSS, Javascript, jQuery, Bootstrap, Photoshop, PHP, MySQL. В разработке использую Gulp с препроцессорами Pug, Sass. Натяжка верстки на Wordpress.</p>
-
-						
-						
-
-					</div>
-
-
-					<div class="portfolio">
-						<p class="portfolio-header">Портфолио</p>
-						<ol>
-							<li><a href="http://sashamakarov.ru">http://sashamakarov.ru</a></li>
-							<li><a href="https://javasergey.github.io/landing-1">https://javasergey.github.io/landing-1</a></li>
-							<li><a href="https://javasergey.github.io/landing-2">https://javasergey.github.io/landing-2</a></li>
-							<li><a href="https://javasergey.github.io/maria">https://javasergey.github.io/maria</a></li>
-							<li><a href="https://javasergey.github.io/sasha">https://javasergey.github.io/sasha</a></li>
-							<li><a href="http://test.sashamakarov.ru">http://test.sashamakarov.ru</a></li>
-						</ol>
-						
-					</div>
-
-
-					<div class="about">
-						<p class="about-header">О себе</p>
-						<p class="about-me">В данный момент нахожусь в поиске работы. По мере приобретения опыта пополняю портфолио.</p>
-					</div>
-					
-					
-
-
-				</section>
-			</div>
-		</div>
-	</div>
-</section>
-
-
-
-
-
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/cf1da9e3c2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 
 
 </body>
+
 </html>
