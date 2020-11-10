@@ -1,0 +1,79 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "header";
+
+
+::placeholder {
+	color: #666;
+	font-size: 15px;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+	color: $text;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+
+#par{
+	background-color: red;
+	padding: 5px 15px;
+	color: white;
+	border-radius: 5px;
+	transition: .3s;
+	cursor: pointer;
+	&:hover{
+		background-color: #FF5656;
+	};
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "media"; /*// Always at the end*/

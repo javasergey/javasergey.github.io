@@ -1,0 +1,148 @@
+@media screen and (max-width: 1199px){
+	.scroll-fixed-subscribe{
+	 	min-width:245px;
+
+	}
+	.subscribe{
+		width: 245px;
+	}
+	.to-top-button{
+		width:80px;
+		left: 0;
+	}
+
+}
+@media screen and (max-width: 991px){
+
+	.main-content .container{
+		min-width:90%;
+	}
+	.header-nav a{
+		padding:7px 8px;
+		font-size: 14px;
+	}
+	.header-link-wrapper{
+		margin-left: 80px;
+	}
+
+	.header-search{
+		right:100px;
+	}
+	.scroll-fixed-subscribe{
+		display: none;
+	}
+	.sidebar-item-cont a{
+		line-height: 1.1;
+		font-size: 13px;
+	}
+	.subscribe, .sidebar{
+		width:100%;
+		margin-left: 20px;
+	}
+
+	.footer .about{
+		width:200px;
+	}
+	.footer .col-sm .copyright{
+		margin-top: 0;
+		margin-left: 0;
+	}
+	.footer .col-sm .contacts {
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 768px){
+	.col-8{
+		min-width: 100%;
+	}
+	.col-4{
+		display: none;
+	}
+	.form-container{
+		display: none;
+	}
+	.footer .col-sm .about{
+		margin:0;
+	}
+	.footer .col-sm .contacts {
+		margin:0;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	
+	.header-nav{
+		display: none;
+	}
+	.main-content .container{
+		width:95%;
+	}
+	.header-search{
+		right: 30px;
+	}
+	.header-link-wrapper{
+		margin-left: 20px;
+	}
+	.menu-link {
+		display: block;
+	}
+	.header-content-wrapper{
+		margin-top: 30px;
+	}
+	
+	.header-search{
+		right: 80px;
+		display: none;
+	}
+	.header-search input[name="search"]{
+		width:150px;
+	}
+	.header-search img{
+		display: none;
+	}
+
+	.article h2{
+		font-size: 28px;
+	}
+	.footer .col-sm .copyright{
+		margin-left: 0;
+		margin-top: 0;
+		margin:0 auto;
+	}
+	.footer .col-sm .about{
+		display: none;
+	}
+
+	.footer .col-sm .contacts{
+		margin: 0;
+		font-size: 14px;
+		line-height: 1.1;
+	}
+}
+@media screen and (max-width: 425px){
+	.header-search input[name="search"]{
+		min-width:95%;
+		
+		margin:63px auto 0 auto;
+
+
+	}
+	.header-search{
+		right:10px;
+		min-width:95%;
+		
+	}
+	.header-content-wrapper{
+		margin-top: 40px;
+	}
+	.header-content .header-content-right{
+		margin:20px 0 0 0;
+	}
+	.article h2{
+		font-size: 24px;
+	}
+	.header-nav1{
+	
+	}
+	
+}
